@@ -93,7 +93,7 @@ def adaptive_threshold(gray, face_area_ratio):
         dynamic += 0.2
 
     if blur < 100:
-        dynamic += 0.35
+        dynamic += 0.25
 
     if contrast < 25:
         dynamic += 0.1
@@ -229,4 +229,5 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
 
