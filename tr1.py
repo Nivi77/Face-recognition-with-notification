@@ -204,7 +204,7 @@ while True:
 
             if best_dist <= dynamic_threshold:
                 person_name = known_names[best_idx]
-                display_label = f"{person_name} | {dists}"
+                display_label = f"{person_name}"
                 display_color = (0, 0, 255)
 
                 if person_name != last_emailed_identity:
@@ -212,7 +212,7 @@ while True:
                     last_emailed_identity = person_name
                     last_email_time = time.time()
             else:
-                display_label = f"Unknown | {dists}"
+                display_label = f"Unknown"
                 display_color = (0, 255, 0)
 
             cv2.rectangle(frame, (x0, y0), (x1, y1), display_color, 2)
@@ -229,3 +229,4 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
